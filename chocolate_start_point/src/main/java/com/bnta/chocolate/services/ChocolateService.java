@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class ChocolateService {
-    Chocolate chocolate;
+
 
     @Autowired
     ChocolateRepository chocolateRepository;
