@@ -20,7 +20,7 @@ public class Estate {
     @Column(name = "country")
     private String country;
 
-    @OneToMany(mappedBy = "estate")
+    @OneToMany(mappedBy = "estate") // How to link two together. Tells spring which properti in the many side how points to this class.
     @JsonIgnoreProperties({"estate"})
     private List<Chocolate> chocolates;
 

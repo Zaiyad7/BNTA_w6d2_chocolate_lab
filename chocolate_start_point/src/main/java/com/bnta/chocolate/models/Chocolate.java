@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Chocolate {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Tells spring how to behave the value, The first chocolate is 1, the next 2, next 3. Identity is the thing that does that
     private Long id;
 
     @Column(name = "name")
@@ -17,7 +17,8 @@ public class Chocolate {
     private int cocoaPercentage;
 
     @ManyToOne
-    @JoinColumn(name = "estate_id")
+    // Join column do the SQL job. SELECT*FROM chocolates INNER JOIN ON chocolates.estate_id = estate.id
+    @JoinColumn(name = "estate_id", nullable = false) // foreign key, A chocolate cannot exist without an estate
     @JsonIgnoreProperties({"chocolates"})
     private Estate estate;
 
