@@ -23,9 +23,9 @@ public class EstateService {
     public List<Estate> getAllEstates(){
         return estateRepository.findAll();
     }
-    
-    
 
 
-
+    public Estate findEstate(Long id) {
+        return  estateRepository.findById(id).get();
+    }
 }

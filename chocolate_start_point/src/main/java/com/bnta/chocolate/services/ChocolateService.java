@@ -22,5 +22,9 @@ public class ChocolateService {
     public List<Chocolate> getAllChocolates(){
             return chocolateRepository.findAll();
         }
+
+    public Chocolate findChocolate(Long id){
+        return chocolateRepository.findById(id).get();
+    }
        
 }

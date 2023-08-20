@@ -23,9 +23,15 @@ public class DataLoader implements ApplicationRunner {
     public void run(ApplicationArguments args){
         Estate estate1 = new Estate("chocolateFarm","Mexico");
         estateRepository.save(estate1);
+
+        Estate estate2 = new Estate("chocolateHouse","Belgium");
+        estateRepository.save(estate2);
         
         Chocolate chocolate1 = new Chocolate("Mars", 50, estate1);
         chocolateRepository.save(chocolate1);
+
+        Chocolate chocolate2 = new Chocolate("Galaxy", 50, estate2);
+        chocolateRepository.save(chocolate2);
     }
     
 }
