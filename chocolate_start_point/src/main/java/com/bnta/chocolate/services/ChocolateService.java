@@ -15,9 +15,8 @@ public class ChocolateService {
     ChocolateRepository chocolateRepository;
 
     
-    public Chocolate saveChocolate(Chocolate chocolate){
+    public void saveChocolate(Chocolate chocolate){
             chocolateRepository.save(chocolate);
-            return chocolate;
         }
     public List<Chocolate> getAllChocolates(){
             return chocolateRepository.findAll();

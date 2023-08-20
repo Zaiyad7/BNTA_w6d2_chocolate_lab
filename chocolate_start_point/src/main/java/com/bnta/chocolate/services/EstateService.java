@@ -14,9 +14,8 @@ public class EstateService {
     @Autowired
     EstateRepository estateRepository;
 
-    public Estate saveEstate(Estate estate){
+    public void saveEstate(Estate estate){ // is void. Doesn't need to return anything
         estateRepository.save(estate);
-        return estate;
         
     }
     
